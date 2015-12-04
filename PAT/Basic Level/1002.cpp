@@ -18,17 +18,14 @@ int main(void)
     int cnt = 0;
     int eachBit[100];
 
-    while (sum) {
+    while (sum) {   //get Number of disgits
         eachBit[cnt] = sum % 10;
         sum /= 10;
         cnt ++;
     }
     
-    cnt --;
-
-    while (cnt) {
+    while (-- cnt) {
         cout << pinyin[eachBit[cnt]] << " ";
-        cnt --;
     }
 
     cout << pinyin[eachBit[cnt]] << endl;
