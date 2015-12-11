@@ -49,7 +49,7 @@ void calCallatz(int *list,const int num) {
     int temp = num;
     while (temp != 1 && !list[temp]) {
         list[temp] = 1;
-        //insuran range of temp
+        //insure range of temp
         do {
             if (temp % 2) temp = (3 * temp + 1) / 2;
             else temp /= 2;
