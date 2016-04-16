@@ -4,7 +4,9 @@
 using namespace std;
 
 int main() {
+#ifndef ONLINE_JUDGE
     freopen("in.txt", "r", stdin);
+#endif
     
     const int MAX_LENGTH = 100;
 
