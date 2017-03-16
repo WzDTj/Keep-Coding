@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    freopen("in.txt", "r", stdin);
+    //freopen("in.txt", "r", stdin);
     
     int leftBeds;
     while (cin >> leftBeds && leftBeds != 0) {
