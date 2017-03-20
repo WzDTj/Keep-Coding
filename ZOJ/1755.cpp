@@ -4,8 +4,10 @@
 using namespace std;
 
 int main() {
-//    freopen("in.txt", "r", stdin);
-    
+#ifndef ONLINE_JUDGE
+    freopen("in.txt", "r", stdin);
+#endif
+
     int n;
     while (cin >> n && n != -1) {
         int l, w, h, max = 0, min = 250;
