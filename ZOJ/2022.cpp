@@ -1,26 +1,21 @@
 #include <iostream>
-#include <cmath>
-
-using namespace std;
+#include <cstdio>
 
 int main () {
 #ifndef ONLINE_JUDGE
     freopen("in.txt", "r", stdin);
 #endif
 	
-	int t, n;
-    cin >> t;
-	while (t -- && cin >> n) {
-		int remainder, beforProcess, afterProcess, cnt = 0, ans = 0;
-        while (pow(5, ++cnt) < n+1) {
-            beforProcess = n/pow(5, cnt);
-            remainder = beforProcess % 5;
-            afterProcess = beforProcess / 5 * 4 + remainder;
-            
-            ans += cnt * afterProcess;
+	long t, n;
+    scanf("%ld", &t);
+	while (t -- && scanf("%ld", &n)) {
+        long sum = 0;
+        while (n) {
+            sum += n / 5;
+            n /= 5;
         }
 
-        cout << ans << endl;
+        printf("%ld\n", sum);
 	}
 	
 	return 0;
