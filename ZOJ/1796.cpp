@@ -1,6 +1,5 @@
 #include <iostream>
-
-using namespace std;
+#include <cstdio>
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -9,10 +8,11 @@ int main() {
 
     int wA, wB, wC, wD, lA, lB, lC, lD;
 
-    while (cin >> wA >> lA >> wB >> lB >> wC >> lC && wA+lA+wB+lB+wC+lC) {
-        wD = 2 * lA + wA - wB - wC;
-        lD = wA + lA - wD;
-        cout << "Anna's won-loss record is " << wD << "-" << lD << "." << endl;
+    
+    while (scanf("%d %d %d %d %d %d", &wA, &lA, &wB, &lB, &wC, &lC) && wA+lA+wB+lB+wC+lC) {
+        wD = lA + lB - wC;
+        lD = wA + wB - lC;
+        printf("Anna's won-loss record is %d-%d.\n", wD, lD);
     }
 
     return 0;
